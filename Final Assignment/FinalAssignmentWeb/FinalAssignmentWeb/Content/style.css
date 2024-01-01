@@ -1,0 +1,597 @@
+﻿/********************
+    Top level
+********************/
+
+body {
+    background-color: rgb(210, 219, 204);
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    padding: 8px 0 8px 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.btn-outline-primary {
+    margin: 10px 0;
+}
+
+.btn-edit,
+.btn-update,
+.btn-cancel,
+.btn-orders,
+.ddl-edit,
+.ddl-edit-editing {
+    background-color: #457600;
+    border: solid 2px #64ad00;
+    border-radius: 5px;
+    color: #e9e9e9;
+    padding: 10px 25px;
+    transition: 0.2s;
+}
+
+.btn-orders {
+    margin-top: 5px;
+}
+
+
+.ddl-edit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: none;
+}
+
+/************
+ Login page
+***********/
+.login-main {
+    background: url('../Images/login-background.png');
+}
+
+.login-content {
+    background-color: rgba(255,255,255, 0.85);
+    border: 2px solid #000;
+    height: 700px;
+    margin: 15px auto;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.input-div {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+    .input-div label {
+        display: block;
+        margin: 10px 0;
+    }
+
+.login-txt {
+    display: block;
+    margin: 0 auto;
+}
+
+.login-main span {
+    font-size: 16px;
+}
+
+/**************
+  Main Page
+**************/
+.sidebar {
+    background-color: #212529;
+    color: white;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: 0.5s;
+    width: 0;
+    z-index: 1;
+}
+
+    .sidebar a {
+        color: #818181;
+        display: block;
+        font-size: 18px;
+        padding: 10px 0;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+.btn-panel {
+    background-color: rgba(255,255,255,0.03);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    left: 0;
+    padding: 15px 10px;
+    position: absolute;
+    top: 0;
+}
+
+    .btn-panel:hover {
+        background-color: #444;
+    }
+
+#main {
+    transition: margin-left .5s;
+}
+
+.area-1, .area-2, .area-3, .area-4 {
+    height: 100%;
+    padding: 50px 20px;
+}
+
+.area-1 {
+    background-color: rgb(98, 144, 83);
+    grid-area: area-1;
+}
+
+.area-2 {
+    background-color: rgb(71, 108, 62);
+    grid-area: area-2;
+}
+
+.area-3 {
+    background-color: rgb(71, 108, 62);
+    grid-area: area-3;
+}
+
+.area-4 {
+    background-color: rgb(98, 144, 83);
+    grid-area: area-4;
+}
+
+.grid {
+    color: #FFF;
+    display: grid;
+    grid-template-areas:
+        'area-3 area-4'
+        'area-1 area-2';
+    text-align: center;
+    width: 100%;
+}
+
+    .grid h2 {
+        margin: 0 0 40px 0;
+    }
+
+.homepage-link {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    color: #d8d8d8;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+}
+
+    .homepage-link:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 2px solid #FFF;
+        color: #FFF;
+        transition: 0.1s;
+    }
+/**********************
+Search and edit pages
+***********************/
+
+/***Search bar***/
+.card-search {
+    width: 1000px;
+}
+
+.txt-search {
+    max-width: 630px;
+    width: 630px;
+}
+
+/***gridviews***/
+.tbl-customers,
+.tbl-employees,
+.tbl-orders {
+    background-color: rgb(240,240,240);
+    border: solid 2px black;
+    font-size: 15px;
+    width: 1000px;
+}
+
+    .tbl-customers th,
+    .tbl-employees th,
+    .tbl-orders th {
+        background-color: rgb(116, 170, 115);
+        border: solid 2px #284500;
+        color: rgb(255, 255, 255);
+        padding: 15px;
+    }
+
+    .tbl-customers td,
+    .tbl-employees td,
+    .tbl-orders td {
+        background-color: rgb(40, 69, 0);
+        border-top: 3px solid rgb(116, 170, 115);
+        color: rgb(255, 255, 255);
+        padding: 15px;
+    }
+
+    .tbl-customers .btn-edit:hover,
+    .tbl-customers .btn-orders:hover,
+    .tbl-employees .btn-edit:hover,
+    .tbl-orders .btn-edit:hover {
+        background-color: rgb(51, 87, 0);
+        border: solid 2px #5a9b00;
+        color: #FFF;
+    }
+
+    .tbl-customers a,
+    .tbl-employees a,
+    .tbl-orders a {
+        color: #cacaca;
+        text-decoration: none;
+    }
+
+    /*colums of the customer table*/
+    .tbl-customers td:nth-child(3),
+    .tbl-customers th:nth-child(3),
+    .tbl-customers td:nth-child(4),
+    .tbl-customers th:nth-child(4),
+    .tbl-customers td:nth-child(5),
+    .tbl-customers th:nth-child(6),
+    .tbl-customers td:nth-child(7),
+    .tbl-customers th:nth-child(7) {
+        display: table-cell;
+    }
+
+    /*colums of the employee table*/
+    .tbl-employees td:nth-child(2),
+    .tbl-employees th:nth-child(2) {
+        display: table-cell;
+    }
+
+
+
+/***formviews***/
+.fmvw-containter {
+    display: grid;
+    grid-template-columns: 600px 300px;
+}
+
+    .fmvw-containter .row {
+        border-bottom: solid 3px rgb(51, 87, 0);
+        margin: 5px auto;
+    }
+
+.fmvw-template {
+    background-color: rgb(98, 144, 83);
+    border: solid 4px rgb(51, 87, 0);
+    color: #FFF;
+    height: 375px;
+    width: 600px;
+}
+
+
+
+.fmvw-template-label {
+    color: #d3d3d3;
+    display: flex;
+    font-weight: 600;
+}
+
+.fmvw-template a {
+    background-color: #457600;
+    border: solid 2px #64ad00;
+    border-radius: 5px;
+    color: #e9e9e9;
+    margin: 30px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+    .fmvw-template a:hover {
+        background-color: rgb(51, 87, 0);
+        border: solid 2px #5a9b00;
+        color: #FFF;
+    }
+
+.fmvw-template .btn-day a {
+    background: none;
+    border: none;
+}
+/***customer formview panel***/
+.tbl-panel {
+    background-color: #629053;
+    border: solid 4px rgb(51, 87, 0);
+    color: white;
+    height: 350px;
+    overflow-x: hidden;
+    text-align: center;
+    transition: 0.5s;
+    width: 0;
+    z-index: 1;
+}
+
+.btn-panel-tbl {
+    cursor: pointer;
+    background-color: rgb(98, 144, 83);
+    border: solid 2px rgb(51, 87, 0);
+    color: white;
+    display: flex;
+    font-size: 12px;
+    padding: 5px;
+}
+
+chk-paid,
+#MainContent_fmvwCustomerInfo_ordPaidCheckBox,
+#MainContent_fmvwOrder_ordPaidCheckBox {
+    filter: sepia(100%) brightness(80%) hue-rotate(270deg) saturate(900%) contrast(300%);
+    height: 15px;
+    width: 15px;
+}
+
+    chk-paid,
+    #MainContent_fmvwCustomerInfo_ordPaidCheckBox:checked,
+    #MainContent_fmvwOrder_ordPaidCheckBox:checked {
+        filter: sepia(100%) brightness(80%) hue-rotate(90deg) saturate(100%) contrast(300%);
+    }
+
+/************
+Mobile view
+***********/
+@media (min-width: 320px) {
+    /************
+      Top level
+    ***********/
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /************
+        Nav
+    ***********/
+    .navbar {
+        padding: 50px 0 0 0;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /************
+      Login page
+    ***********/
+    .login-content {
+        width: 90%;
+    }
+
+    .login-main span {
+        font-size: 12px;
+    }
+
+    /************
+      Search bar
+    ***********/
+    .card-search {
+        width: 250px;
+    }
+
+    .txt-search {
+        width: 157px;
+    }
+
+    .tbl-customers,
+    .tbl-employees,
+    .tbl-orders {
+        width: 250px;
+    }
+        /*colums of the customer table*/
+        .tbl-customers td:nth-child(2),
+        .tbl-customers th:nth-child(2),
+        .tbl-customers td:nth-child(3),
+        .tbl-customers th:nth-child(3),
+        .tbl-customers td:nth-child(4),
+        .tbl-customers th:nth-child(4),
+        .tbl-customers td:nth-child(5),
+        .tbl-customers th:nth-child(5),
+        .tbl-customers td:nth-child(6),
+        .tbl-customers th:nth-child(6),
+        .tbl-customers td:nth-child(7),
+        .tbl-customers th:nth-child(7) {
+            display: none;
+        }
+
+        /*colums of the employee table*/
+        .tbl-employees td:nth-child(3),
+        .tbl-employees th:nth-child(3) {
+            display: none;
+        }
+
+        /*colums of the orders table*/
+        .tbl-orders td:nth-child(2),
+        .tbl-orders th:nth-child(2),
+        .tbl-orders td:nth-child(4),
+        .tbl-orders th:nth-child(4) {
+            display: none;
+        }
+    /************
+      Formviews
+    ***********/
+    .fmvw-containter {
+        display: grid;
+        grid-template-columns: 220px 100px;
+    }
+
+    .fmvw-template {
+        width: 220px;
+    }
+}
+
+/************
+Tablet view
+***********/
+@media (min-width: 768px) {
+    /************
+      Top level
+    ***********/
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    /************
+     Login page
+    ***********/
+    .login-content {
+        width: 50%;
+    }
+
+    .login-main span {
+        font-size: 14px;
+    }
+
+    /************
+     Search bar
+    ***********/
+    .card-search {
+        width: 700px;
+    }
+
+    .txt-search {
+        width: 378px;
+    }
+
+    .tbl-customers,
+    .tbl-employees,
+    .tbl-orders {
+        width: 700px;
+    }
+
+        /*colums of the customer table*/
+        .tbl-customers td:nth-child(2),
+        .tbl-customers th:nth-child(2),
+        .tbl-customers td:nth-child(3),
+        .tbl-customers th:nth-child(3) {
+            display: table-cell;
+        }
+
+        /*colums of the employee table*/
+        .tbl-employees td:nth-child(3),
+        .tbl-employees th:nth-child(3) {
+            display: table-cell;
+        }
+
+        /*colums of the orders table*/
+        .tbl-orders td:nth-child(4),
+        .tbl-orders th:nth-child(4) {
+            display: table-cell;
+        }
+    /************
+      Formviews
+    ***********/
+
+    .fmvw-containter {
+        display: grid;
+        grid-template-columns: 400px 200px;
+    }
+
+    .fmvw-template {
+        width: 400px;
+    }
+}
+
+/************
+Laptop view
+***********/
+@media (min-width: 1024px) {
+    /************
+      Top level
+    ***********/
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .login-content {
+        width: 40%;
+    }
+
+    /************
+     Search bar
+    ***********/
+    .card-search {
+        width: 1000px;
+    }
+
+    .txt-search {
+        max-width: 630px;
+        width: 630px;
+    }
+
+    /************
+     Gridviews
+    ***********/
+    .tbl-customers,
+    .tbl-employees,
+    .tbl-orders {
+        width: 1000px;
+    }
+
+        /*colums of the customer table*/
+        .tbl-customers td:nth-child(2),
+        .tbl-customers th:nth-child(2),
+        .tbl-customers td:nth-child(3),
+        .tbl-customers th:nth-child(3),
+        .tbl-customers td:nth-child(4),
+        .tbl-customers th:nth-child(4),
+        .tbl-customers td:nth-child(5),
+        .tbl-customers th:nth-child(5),
+        .tbl-customers td:nth-child(6),
+        .tbl-customers th:nth-child(6),
+        .tbl-customers td:nth-child(7),
+        .tbl-customers th:nth-child(7) {
+            display: table-cell;
+        }
+
+        .tbl-orders th:nth-child(2),
+        .tbl-orders td:nth-child(2) {
+            display: table-cell;
+        }
+        /************
+      Formviews
+    ***********/
+        .fmvw-containter {
+            display: grid;
+            grid-template-columns: 600px 300px;
+        }
+
+    .fmvw-template {
+        width: 600px;
+    }
+}
